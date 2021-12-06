@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter Project</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="main">
+		<p>Counter</p>
+		<div><span id="count">0</span></div>
+		<button id="lowerCount">Lower Count</button>
+		<button id="upperCount">Upper Count</button>
+	</div>
+
+	<script type="text/javascript">
+		function $(id) {
+			// body...
+			return document.getElementById(id)
+		}
+
+		var i = 0
+		$("upperCount").onclick = upperCount;
+		$("lowerCount").onclick = lowerCount;
+		function upperCount(){
+			console.log("hello");
+			i++
+			$("count").innerHTML = i;
+			if(i>=0){
+				$("count").style.color = "#000"
+			}
+			console.log(i)
+		}
+		function lowerCount(){
+			i--
+			$("count").innerHTML = i;
+			if(i<0){
+				$("count").style.color = "red"
+			}
+			console.log(i)
+		}
+	</script>
+</body>
+</html>
