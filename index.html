@@ -19,7 +19,7 @@
 			return document.getElementById(id)
 		}
 
-		var i = 0
+		let i = 0
 		$("upperCount").onclick = upperCount;
 		$("lowerCount").onclick = lowerCount;
 		function upperCount(){
@@ -32,6 +32,7 @@
 			console.log(i)
 		}
 		function lowerCount(){
+			console.log('Decrement by one)
 			i--
 			$("count").innerHTML = i;
 			if(i<0){
